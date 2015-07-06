@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>angular demo</title>
+    <link rel="stylesheet" href="./lib/css/bootstrap.css" media="screen"/>
+    <link rel="stylesheet" href="./lib/css/bootstrap-responsive.css" media="screen"/>
+    <link rel="stylesheet" href="./lib/css/bootstrap-datetimepicker.min.css" media="screen"/>
+    <link rel="stylesheet" href="./lib/css/common.css" media="screen"/>
+    <script type="text/javascript" src="./lib/js/require.min.js"></script>
+    <script type="text/javascript" src="./lib/js/require-config.js"></script>
+    <script type="text/javascript" src="./js/data.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <style>
+        .animate-show {
+            line-height: 20px;
+            opacity: 1;
+            padding: 10px;
+            border: 1px solid black;
+            background: white;
+        }
+
+        .animate-show.ng-hide-add.ng-hide-add-active,
+        .animate-show.ng-hide-remove.ng-hide-remove-active {
+            -webkit-transition: all linear 0.5s;
+            transition: all linear 0.5s;
+        }
+
+        .animate-show.ng-hide {
+            line-height: 0;
+            opacity: 0;
+            padding: 0 10px;
+        }
+
+        .check-element {
+            padding: 10px;
+            border: 1px solid black;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <!-- 导航条  --start -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="#" style="float:left;" id="brand">angular
+                </a>
+                <ul class="breadcrumb" ng-if="bread && bread.length" style="margin: 2px 0px;display: inline-block;">
+                    <li ng-repeat="crumb in bread" class="{{ $last ? 'active' : '' }}">
+                        <span class="divider">/</span><a ng-if="!$last" href="#{{ crumb.href }}">{{ crumb.text }}</a>
+                        {{ $last ? crumb.text : '' }}
+                    </li>
+                </ul>
+                <div class="nav-collapse collapse" style="float: right;">
+                    <ul class="nav module-nav">
+                        <li>
+                            <a href="#/hello">hello</a>
+                        </li>
+                        <li>
+                            <a href="#/" target="_self">退出</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 导航条  --end -->
+
+    <div id="main" class="container-fluid" style="margin-top: 45px;">
+        <div ng-view></div>
+    </div>
+</div>
+
+</body>
+</html>

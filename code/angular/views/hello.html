@@ -1,0 +1,25 @@
+<div class="row-fluid" ng-controller="homeController">
+    <h2>数据绑定</h2>
+
+    <div>name:<input type="text" ng-model="name" /> hello {{name}} ; <span ng-bind="name"></span>
+         <div ng-show="name==1" class="animate-show">name is 1</div>
+    </div>
+</div>
+<div class="row-fluid">
+    <h2>数据显示</h2>
+
+
+</div>
+<div ng-controller="homeController">
+    <div my-date class="input-append date input-prepend">
+        <span class="add-on">起始时间</span>
+        <input class="uneditable-input" type="text" value="" ng-model="curDate"/>
+        <span class="add-on"><i data-time-icon="icon-time" data-date-icon="icon-calendar"></i></span>
+    </div>
+    <span>当前选择的时间是{{curDate}}</span>
+</div>
+
+<div my-date class="input-append date">
+    <input class="uneditable-input" type="text" ng-model="curDate"/>
+    <span class="add-on"><i data-time-icon="icon-time" data-date-icon="icon-calendar"></i></span>
+</div>

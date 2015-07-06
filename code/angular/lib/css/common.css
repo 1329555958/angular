@@ -1,0 +1,118 @@
+@CHARSET "UTF-8";
+/*修改默认字体*/
+body, button, input, select, textarea, h1, h2, h3, h4, h5, h6 {
+    font-family: Microsoft YaHei, '宋体', Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+}
+
+.module-nav {
+    cursor: pointer;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-middle {
+    vertical-align: middle;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.width20 {
+    width: 20%;
+}
+
+.width30 {
+    width: 30%;
+}
+
+.width50 {
+    width: 50%;
+}
+
+.width100 {
+    width: 100%;
+}
+
+.pad-left30 {
+    padding-left: 30px;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.control-label {
+    font-weight: bold;
+}
+
+.form-horizontal .control-group {
+    margin-bottom: 5px;
+}
+
+table.table-striped thead tr {
+    color: rgb(136, 136, 136);
+    font-weight: normal;
+    background: rgb(238, 238, 238);
+    border-bottom: 1px solid rgb(210, 210, 210);
+}
+
+table.table-striped thead th:not(:first-child) {
+    border-left: 1px #fff solid;
+}
+
+table.table-striped thead th:not(:first-child), tbody tr td:not(:first-child) {
+    text-align: right;
+}
+
+table.table-striped tbody tr {
+    height: 36px;
+    line-height: 36px;
+    border-bottom: 1px #D5D5D5 solid;
+    cursor: pointer;
+}
+
+table.table-striped {
+    margin-bottom: 0px;
+}
+
+.pagination {
+    margin-top: 0px;
+}
+
+/*分页 活动*/
+.pagination ul > li > a:hover, .pagination ul > li > a:focus, .pagination ul > .active > a, .pagination ul > .active > span {
+    background-color: rgb(238, 238, 238);
+    color: black;
+    cursor: pointer;
+}
+
+/*行内按钮*/
+.btn-inline{
+    border: none;
+    padding: 0px 12px;
+}
+
+/*必填元素样式*/
+.control-label[required]:after{
+    content: "*";
+    color: red;
+}
